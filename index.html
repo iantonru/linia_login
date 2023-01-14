@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Личный кабинет «ГРИНН энергосбыт»" />
+    <title>Личный кабинет | Гипермаркет «ЛИНИЯ»</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Card -->
+      <div class="card">
+        <div class="card__text-left">
+          <h2 class="card__header">Добро пожаловать!</h2>
+          <p>Введите свои личные данные и начните работу с нами</p>
+        </div>
+        <div class="card__text-right">
+          <h2 class="card__header">Добро пожаловать!</h2>
+          <p>Войдите в свою учетную запись и накапливайте бонусы программы лояльности гипермаркета «ЛИНИЯ»</p>
+        </div>
+        <form class="loginPage" action="/users/login" method="POST">
+          <img class="linia-logo" src="/icons/logo.svg" alt="Логотип ЛИНИИ">
+          <h1 class="card__main-header">Вход</h1>
+          <div class="group">
+            <label class="card__label card__label_card" for="card-login"></label>
+            <input class="card__input" type="text" name="card" placeholder="Номер карты" id="card-login" />
+          </div>
+          <div class="group">
+            <label class="card__label card__label_password" for="password-login"> </label>
+            <input class="card__input" type="password" name="password" placeholder="Пароль" id="password-login" />
+          </div>
+          <div class="group">
+            <button id="login" type="submit">Войти</button>
+            <button class="group__register" type="button">Нет аккаунта?</button>
+          </div>
+        </form>
+        <form class="registerPage" action="/users/register" method="POST">
+          <img class="linia-logo" src="/icons/logo.svg" alt="Логотип ЛИНИИ">
+          <h1 class="card__main-header">Регистрация</h1>
+          <div class="group">
+            <label class="card__label card__label_card" for="card-register"></label>
+            <input class="card__input" type="text" name="card" placeholder="Номер карты" id="card-register" />
+          </div>
+          <div class="group">
+            <label class="card__label card__label_code" for="code-register"></label>
+            <input class="card__input" type="text" name="code" placeholder="Код регистрации" id="code-register" />
+          </div>
+          <div class="group">
+            <label class="card__label card__label_password" for="password-register"></label>
+            <input class="card__input" type="password" name="password" placeholder="Новый пароль" id="password-register" />
+          </div>
+          <div class="group">
+            <label class="card__label card__label_password" for="password-register_confirm"></label>
+            <input class="card__input" type="password" name="password2" placeholder="Подтвердите пароль" id="password-register_confirm" />
+          </div>
+          <button id="register" type="submit">Зарегистрироваться</button>
+          <a class="open-popup" href="#">Инструкция</a>
+          <button class="register__close" type="button">
+            <span class="visually-hidden">Закрыть</span>
+            <span class="popup__line"></span>
+            <span class="popup__line"></span>
+          </button>
+        </form>
+        <div class="cover">
+          <button id="changePage" name="changePage">
+            <span class="changePage-span changePage-span_active">Регистрация</span>
+            <span class="changePage-span">Вход</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Pop-up -->
+      <div class="popup-bg">
+        <div class="popup">
+          <button class="close-popup" type="button">
+            <span class="visually-hidden">Закрыть</span>
+            <span class="popup__line"></span>
+            <span class="popup__line"></span>
+          </button>
+          <h2 class="popup__header">Инструкция</h2>
+          <p class="popup__desc">
+            Для регистрации в личном кабинете Вам необходимо получить код регистрации, для этого совершите покупку в гипермаркете «ЛИНИЯ» с
+            использованием карты.
+          </p>
+          <img class="popup__img" src="/icons/chek.png" alt="" />
+          <p class="popup__desc">
+            Введите номер карты в поле «Номер карты», полученный код регистрации находится в чеке, его необходимо ввести в поле «Введите код
+            регистрации», придумайте и введите пароль в поле «Пароль», продублировав его в поле «Подтвердите пароль».
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS -->
+    <script src="/js/jquery-3.6.3.min.js"></script>
+    <script src="/js/anime.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
