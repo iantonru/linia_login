@@ -724,12 +724,12 @@ input::placeholder {
     }
 
     .loginPage .linia-logo {
-        top: 15%;
+        top: 5%;
     }
 
     .registerPage .linia-logo {
         opacity: 0;
-        top: 10%;
+        top: 0;
         transition: opacity 2s ease;
     }
 }
