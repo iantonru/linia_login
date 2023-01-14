@@ -367,7 +367,7 @@ input::placeholder {
     opacity: 1;
 }
 
-.linia-logo{
+.linia-logo {
     min-width: 20%;
     margin-bottom: 2rem;
 }
@@ -527,6 +527,18 @@ input::placeholder {
     margin: 20px 0;
 }
 
+/* Logo */
+.linia-logo {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.registerPage .linia-logo {
+    top: 10%;
+}
+
 /* Media */
 @media (max-width: 1400px) {
 
@@ -595,6 +607,18 @@ input::placeholder {
 
     #changePage {
         margin-top: 170px;
+    }
+
+    .loginPage .linia-logo {
+        top: 15%;
+    }
+
+    .registerPage .linia-logo {
+        top: 5%;
+    }
+
+    .card__main-header {
+        margin-top: 25px;
     }
 
     /* Off hovers */
@@ -671,24 +695,16 @@ input::placeholder {
         background-color: #fff;
     }
 
-    .linia-logo{
-        background-color: #fff;
-        padding: 1.5rem;
-        margin: 1rem 0;
-        border-radius: 0.6rem;
-        min-width: 40%;
-    }
-}
-
-@media (max-width: 576px) {
     .popup {
         width: 90%;
     }
 
     .container {
+        max-width: 100%;
         width: 100%;
         height: 100%;
         padding: 0;
+        margin: 0;
     }
 
     .card {
@@ -699,6 +715,26 @@ input::placeholder {
         box-shadow: none;
     }
 
+    .linia-logo {
+        background-color: #fff;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        border-radius: 0.6rem;
+        min-width: 30%;
+    }
+
+    .loginPage .linia-logo {
+        top: 15%;
+    }
+
+    .registerPage .linia-logo {
+        opacity: 0;
+        top: 10%;
+        transition: opacity 2s ease;
+    }
+}
+
+@media (max-width: 576px) {
     .card__main-header {
         margin-bottom: 30px;
     }

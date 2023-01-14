@@ -4,6 +4,7 @@ const registerPage = document.querySelector('.registerPage');
 const changePage = document.querySelector('#changePage');
 const groupRegister = document.querySelector('.group__register');
 const closeRegister = document.querySelector('.register__close');
+const registerLogo = document.querySelector('#register-logo');
 
 let xxl = window.matchMedia('(min-width: 1400px)');
 let xl = window.matchMedia('(min-width: 1200px)');
@@ -169,12 +170,15 @@ groupRegister.addEventListener('click', function () {
     registerPage.style.maxHeight = '100%';
     registerPage.style.pointerEvents = 'auto';
     loginPage.style.pointerEvents = 'none';
+    registerLogo.style.cssText = 'transition: opacity 2s ease; opacity: 1';
 });
 
 closeRegister.addEventListener('click', function () {
     registerPage.style.maxHeight = '0px';
     registerPage.style.pointerEvents = 'none';
     loginPage.style.pointerEvents = 'auto';
+    registerLogo.style.opacity = '0';
+    registerLogo.style.cssText = 'transition: opacity .5s ease';
 });
 
 changePage.addEventListener('click', function () {
